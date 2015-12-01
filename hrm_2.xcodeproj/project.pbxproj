@@ -14,8 +14,8 @@
 		36EA14011C0C43F900D6FAAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36EA13FF1C0C43F900D6FAAE /* LaunchScreen.storyboard */; };
 		36EA140C1C0C43F900D6FAAE /* hrm_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EA140B1C0C43F900D6FAAE /* hrm_2Tests.m */; };
 		36EA14171C0C43F900D6FAAE /* hrm_2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EA14161C0C43F900D6FAAE /* hrm_2UITests.m */; };
-		36EA14261C0C444900D6FAAE /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EA14251C0C444900D6FAAE /* TableViewController.m */; };
 		65AEE1E051821317C2B738A7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FBE339EB2264F2F8C75B42 /* libPods.a */; };
+		CF08289F1C0D70E10029E422 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF08289E1C0D70E10029E422 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +50,9 @@
 		36EA14121C0C43F900D6FAAE /* hrm_2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hrm_2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36EA14161C0C43F900D6FAAE /* hrm_2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hrm_2UITests.m; sourceTree = "<group>"; };
 		36EA14181C0C43F900D6FAAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		36EA14241C0C444900D6FAAE /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		36EA14251C0C444900D6FAAE /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		B759598790C3D70B93DC32C6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CF08289D1C0D70E10029E422 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		CF08289E1C0D70E10029E422 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		D01D2CB1D3FB3DD34B93B3F3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F4FBE339EB2264F2F8C75B42 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -115,8 +115,8 @@
 				36EA13FF1C0C43F900D6FAAE /* LaunchScreen.storyboard */,
 				36EA14021C0C43F900D6FAAE /* Info.plist */,
 				36EA13F11C0C43F900D6FAAE /* Supporting Files */,
-				36EA14241C0C444900D6FAAE /* TableViewController.h */,
-				36EA14251C0C444900D6FAAE /* TableViewController.m */,
+				CF08289D1C0D70E10029E422 /* MainViewController.h */,
+				CF08289E1C0D70E10029E422 /* MainViewController.m */,
 			);
 			path = hrm_2;
 			sourceTree = "<group>";
@@ -346,7 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36EA13F61C0C43F900D6FAAE /* AppDelegate.m in Sources */,
-				36EA14261C0C444900D6FAAE /* TableViewController.m in Sources */,
+				CF08289F1C0D70E10029E422 /* MainViewController.m in Sources */,
 				36EA13F31C0C43F900D6FAAE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
