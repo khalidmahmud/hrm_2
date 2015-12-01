@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3633D66F1C0D6E5D00F4763A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3633D66E1C0D6E5D00F4763A /* CoreData.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		3633D6B71C0D9B8500F4763A /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3633D6B51C0D9B8500F4763A /* DataModel.xcdatamodeld */; };
 		36EA13F31C0C43F900D6FAAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EA13F21C0C43F900D6FAAE /* main.m */; };
 		36EA13F61C0C43F900D6FAAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EA13F51C0C43F900D6FAAE /* AppDelegate.m */; };
 		36EA13FC1C0C43F900D6FAAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36EA13FA1C0C43F900D6FAAE /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3633D66E1C0D6E5D00F4763A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3633D6B61C0D9B8500F4763A /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		36EA13EE1C0C43F900D6FAAE /* hrm_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hrm_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36EA13F21C0C43F900D6FAAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		36EA13F41C0C43F900D6FAAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3633D66F1C0D6E5D00F4763A /* CoreData.framework in Frameworks */,
 				65AEE1E051821317C2B738A7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,8 +120,10 @@
 				36EA13FF1C0C43F900D6FAAE /* LaunchScreen.storyboard */,
 				36EA14021C0C43F900D6FAAE /* Info.plist */,
 				36EA13F11C0C43F900D6FAAE /* Supporting Files */,
-				CF08289D1C0D70E10029E422 /* MainViewController.h */,
-				CF08289E1C0D70E10029E422 /* MainViewController.m */,
+				36EA14241C0C444900D6FAAE /* TableViewController.h */,
+				36EA14251C0C444900D6FAAE /* TableViewController.m */,
+				3633D6B51C0D9B8500F4763A /* DataModel.xcdatamodeld */,
+
 			);
 			path = hrm_2;
 			sourceTree = "<group>";
@@ -159,6 +166,7 @@
 		FF75FACE52B6A761080FDE69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3633D66E1C0D6E5D00F4763A /* CoreData.framework */,
 				F4FBE339EB2264F2F8C75B42 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -346,11 +354,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				36EA13F61C0C43F900D6FAAE /* AppDelegate.m in Sources */,
-				CF08289F1C0D70E10029E422 /* MainViewController.m in Sources */,
+				3633D6B71C0D9B8500F4763A /* DataModel.xcdatamodeld in Sources */,
+				36EA14261C0C444900D6FAAE /* TableViewController.m in Sources */,
 				36EA13F31C0C43F900D6FAAE /* main.m in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+			runOnlyForDeploymentPostprocessing = 0;		};
 		36EA14031C0C43F900D6FAAE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -594,6 +602,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3633D6B51C0D9B8500F4763A /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3633D6B61C0D9B8500F4763A /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 3633D6B61C0D9B8500F4763A /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 36EA13E61C0C43F900D6FAAE /* Project object */;
 }
