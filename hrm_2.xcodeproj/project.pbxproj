@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3633D66F1C0D6E5D00F4763A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3633D66E1C0D6E5D00F4763A /* CoreData.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		3633D6B71C0D9B8500F4763A /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3633D6B51C0D9B8500F4763A /* DataModel.xcdatamodeld */; };
+		3655C5D61C0EA534005D12A3 /* hrm_2 in Resources */ = {isa = PBXBuildFile; fileRef = 3655C5D51C0EA534005D12A3 /* hrm_2 */; };
+		36DEFFFB1C0E9F4F00FCCD50 /* hrm_2 in Resources */ = {isa = PBXBuildFile; fileRef = 36DEFFFA1C0E9F4F00FCCD50 /* hrm_2 */; };
 		36EA13F31C0C43F900D6FAAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EA13F21C0C43F900D6FAAE /* main.m */; };
 		36EA13F61C0C43F900D6FAAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EA13F51C0C43F900D6FAAE /* AppDelegate.m */; };
 		36EA13FC1C0C43F900D6FAAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36EA13FA1C0C43F900D6FAAE /* Main.storyboard */; };
@@ -17,7 +19,6 @@
 		36EA140C1C0C43F900D6FAAE /* hrm_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EA140B1C0C43F900D6FAAE /* hrm_2Tests.m */; };
 		36EA14171C0C43F900D6FAAE /* hrm_2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EA14161C0C43F900D6FAAE /* hrm_2UITests.m */; };
 		65AEE1E051821317C2B738A7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FBE339EB2264F2F8C75B42 /* libPods.a */; };
-		CF08289F1C0D70E10029E422 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF08289E1C0D70E10029E422 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 /* Begin PBXFileReference section */
 		3633D66E1C0D6E5D00F4763A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3633D6B61C0D9B8500F4763A /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		3655C5D51C0EA534005D12A3 /* hrm_2 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = hrm_2; sourceTree = SOURCE_ROOT; };
+		36DEFFFA1C0E9F4F00FCCD50 /* hrm_2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = hrm_2; sourceTree = "<group>"; };
 		36EA13EE1C0C43F900D6FAAE /* hrm_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hrm_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36EA13F21C0C43F900D6FAAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		36EA13F41C0C43F900D6FAAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -55,8 +58,6 @@
 		36EA14161C0C43F900D6FAAE /* hrm_2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hrm_2UITests.m; sourceTree = "<group>"; };
 		36EA14181C0C43F900D6FAAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B759598790C3D70B93DC32C6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		CF08289D1C0D70E10029E422 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		CF08289E1C0D70E10029E422 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		D01D2CB1D3FB3DD34B93B3F3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F4FBE339EB2264F2F8C75B42 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -88,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3655C5D41C0EA51A005D12A3 /* Employee */ = {
+			isa = PBXGroup;
+			children = (
+				3655C5D51C0EA534005D12A3 /* hrm_2 */,
+			);
+			name = Employee;
+			sourceTree = "<group>";
+		};
 		36EA13E51C0C43F900D6FAAE = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +122,8 @@
 		36EA13F01C0C43F900D6FAAE /* hrm_2 */ = {
 			isa = PBXGroup;
 			children = (
+				3655C5D41C0EA51A005D12A3 /* Employee */,
+				36DEFFFA1C0E9F4F00FCCD50 /* hrm_2 */,
 				36EA13F41C0C43F900D6FAAE /* AppDelegate.h */,
 				36EA13F51C0C43F900D6FAAE /* AppDelegate.m */,
 				36EA13FA1C0C43F900D6FAAE /* Main.storyboard */,
@@ -120,10 +131,7 @@
 				36EA13FF1C0C43F900D6FAAE /* LaunchScreen.storyboard */,
 				36EA14021C0C43F900D6FAAE /* Info.plist */,
 				36EA13F11C0C43F900D6FAAE /* Supporting Files */,
-				36EA14241C0C444900D6FAAE /* TableViewController.h */,
-				36EA14251C0C444900D6FAAE /* TableViewController.m */,
 				3633D6B51C0D9B8500F4763A /* DataModel.xcdatamodeld */,
-
 			);
 			path = hrm_2;
 			sourceTree = "<group>";
@@ -279,6 +287,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				36EA14011C0C43F900D6FAAE /* LaunchScreen.storyboard in Resources */,
+				3655C5D61C0EA534005D12A3 /* hrm_2 in Resources */,
+				36DEFFFB1C0E9F4F00FCCD50 /* hrm_2 in Resources */,
 				36EA13FE1C0C43F900D6FAAE /* Assets.xcassets in Resources */,
 				36EA13FC1C0C43F900D6FAAE /* Main.storyboard in Resources */,
 			);
@@ -355,10 +365,10 @@
 			files = (
 				36EA13F61C0C43F900D6FAAE /* AppDelegate.m in Sources */,
 				3633D6B71C0D9B8500F4763A /* DataModel.xcdatamodeld in Sources */,
-				36EA14261C0C444900D6FAAE /* TableViewController.m in Sources */,
 				36EA13F31C0C43F900D6FAAE /* main.m in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;		};
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		36EA14031C0C43F900D6FAAE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
