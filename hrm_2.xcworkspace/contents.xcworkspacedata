@@ -2,42 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Employee+CoreDataProperties.h">
-   </FileRef>
-   <FileRef
-      location = "group:Employee+CoreDataProperties.m">
-   </FileRef>
-   <FileRef
-      location = "group:Employee.h">
-   </FileRef>
-   <FileRef
-      location = "group:Employee.m">
-   </FileRef>
-   <FileRef
-      location = "group:Department+CoreDataProperties.h">
-   </FileRef>
-   <FileRef
-      location = "group:Department+CoreDataProperties.m">
-   </FileRef>
-   <FileRef
-      location = "group:Department.h">
-   </FileRef>
-   <FileRef
-      location = "group:Department.m">
-   </FileRef>
-   <FileRef
-      location = "group:Designation+CoreDataProperties.h">
-   </FileRef>
-   <FileRef
-      location = "group:Designation+CoreDataProperties.m">
-   </FileRef>
-   <FileRef
-      location = "group:Designation.h">
-   </FileRef>
-   <FileRef
-      location = "group:Designation.m">
-   </FileRef>
-   <FileRef
       location = "group:hrm_2.xcodeproj">
    </FileRef>
    <FileRef
