@@ -9,12 +9,6 @@
 /* Begin PBXBuildFile section */
 		3633D66F1C0D6E5D00F4763A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3633D66E1C0D6E5D00F4763A /* CoreData.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		3633D6B71C0D9B8500F4763A /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3633D6B51C0D9B8500F4763A /* DataModel.xcdatamodeld */; };
-		366BC2A01C0EF6A3003A89E1 /* Department+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 366BC29B1C0EF6A3003A89E1 /* Department+CoreDataProperties.m */; };
-		366BC2A11C0EF6A3003A89E1 /* Designation+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 366BC29D1C0EF6A3003A89E1 /* Designation+CoreDataProperties.m */; };
-		366BC2A21C0EF6A3003A89E1 /* Employee+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 366BC29F1C0EF6A3003A89E1 /* Employee+CoreDataProperties.m */; };
-		366BC2A61C0EF6AC003A89E1 /* Department.m in Sources */ = {isa = PBXBuildFile; fileRef = 366BC2A51C0EF6AC003A89E1 /* Department.m */; };
-		366BC2AA1C0EF6B7003A89E1 /* Designation.m in Sources */ = {isa = PBXBuildFile; fileRef = 366BC2A91C0EF6B7003A89E1 /* Designation.m */; };
-		366BC2AE1C0EF6C5003A89E1 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 366BC2AD1C0EF6C5003A89E1 /* Employee.m */; };
 		36EA13F31C0C43F900D6FAAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EA13F21C0C43F900D6FAAE /* main.m */; };
 		36EA13F61C0C43F900D6FAAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EA13F51C0C43F900D6FAAE /* AppDelegate.m */; };
 		36EA13FC1C0C43F900D6FAAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36EA13FA1C0C43F900D6FAAE /* Main.storyboard */; };
@@ -23,6 +17,13 @@
 		36EA140C1C0C43F900D6FAAE /* hrm_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EA140B1C0C43F900D6FAAE /* hrm_2Tests.m */; };
 		36EA14171C0C43F900D6FAAE /* hrm_2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EA14161C0C43F900D6FAAE /* hrm_2UITests.m */; };
 		65AEE1E051821317C2B738A7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FBE339EB2264F2F8C75B42 /* libPods.a */; };
+		CF5D07761C1142B600BEA91F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5D07751C1142B600BEA91F /* MainViewController.m */; };
+		CFE121651C115474000081A0 /* Department+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE121601C115474000081A0 /* Department+CoreDataProperties.m */; };
+		CFE121661C115474000081A0 /* Designation+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE121621C115474000081A0 /* Designation+CoreDataProperties.m */; };
+		CFE121671C115474000081A0 /* Employee+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE121641C115474000081A0 /* Employee+CoreDataProperties.m */; };
+		CFE1216A1C115483000081A0 /* Department.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE121691C115483000081A0 /* Department.m */; };
+		CFE1216D1C115497000081A0 /* Designation.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE1216C1C115497000081A0 /* Designation.m */; };
+		CFE121701C1154A7000081A0 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE1216F1C1154A7000081A0 /* Employee.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,18 +46,6 @@
 /* Begin PBXFileReference section */
 		3633D66E1C0D6E5D00F4763A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3633D6B61C0D9B8500F4763A /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		366BC29A1C0EF6A3003A89E1 /* Department+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Department+CoreDataProperties.h"; sourceTree = "<group>"; };
-		366BC29B1C0EF6A3003A89E1 /* Department+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Department+CoreDataProperties.m"; sourceTree = "<group>"; };
-		366BC29C1C0EF6A3003A89E1 /* Designation+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Designation+CoreDataProperties.h"; sourceTree = "<group>"; };
-		366BC29D1C0EF6A3003A89E1 /* Designation+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Designation+CoreDataProperties.m"; sourceTree = "<group>"; };
-		366BC29E1C0EF6A3003A89E1 /* Employee+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Employee+CoreDataProperties.h"; sourceTree = "<group>"; };
-		366BC29F1C0EF6A3003A89E1 /* Employee+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Employee+CoreDataProperties.m"; sourceTree = "<group>"; };
-		366BC2A41C0EF6AC003A89E1 /* Department.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Department.h; sourceTree = "<group>"; };
-		366BC2A51C0EF6AC003A89E1 /* Department.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Department.m; sourceTree = "<group>"; };
-		366BC2A81C0EF6B7003A89E1 /* Designation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Designation.h; sourceTree = "<group>"; };
-		366BC2A91C0EF6B7003A89E1 /* Designation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Designation.m; sourceTree = "<group>"; };
-		366BC2AC1C0EF6C5003A89E1 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
-		366BC2AD1C0EF6C5003A89E1 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 		36EA13EE1C0C43F900D6FAAE /* hrm_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hrm_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36EA13F21C0C43F900D6FAAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		36EA13F41C0C43F900D6FAAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +61,20 @@
 		36EA14161C0C43F900D6FAAE /* hrm_2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hrm_2UITests.m; sourceTree = "<group>"; };
 		36EA14181C0C43F900D6FAAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B759598790C3D70B93DC32C6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CF5D07741C1142B600BEA91F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		CF5D07751C1142B600BEA91F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		CFE1215F1C115474000081A0 /* Department+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Department+CoreDataProperties.h"; sourceTree = "<group>"; };
+		CFE121601C115474000081A0 /* Department+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Department+CoreDataProperties.m"; sourceTree = "<group>"; };
+		CFE121611C115474000081A0 /* Designation+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Designation+CoreDataProperties.h"; sourceTree = "<group>"; };
+		CFE121621C115474000081A0 /* Designation+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Designation+CoreDataProperties.m"; sourceTree = "<group>"; };
+		CFE121631C115474000081A0 /* Employee+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Employee+CoreDataProperties.h"; sourceTree = "<group>"; };
+		CFE121641C115474000081A0 /* Employee+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Employee+CoreDataProperties.m"; sourceTree = "<group>"; };
+		CFE121681C115483000081A0 /* Department.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Department.h; sourceTree = "<group>"; };
+		CFE121691C115483000081A0 /* Department.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Department.m; sourceTree = "<group>"; };
+		CFE1216B1C115497000081A0 /* Designation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Designation.h; sourceTree = "<group>"; };
+		CFE1216C1C115497000081A0 /* Designation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Designation.m; sourceTree = "<group>"; };
+		CFE1216E1C1154A7000081A0 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
+		CFE1216F1C1154A7000081A0 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 		D01D2CB1D3FB3DD34B93B3F3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F4FBE339EB2264F2F8C75B42 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -106,12 +109,12 @@
 		366BC2991C0EF6A3003A89E1 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				366BC29A1C0EF6A3003A89E1 /* Department+CoreDataProperties.h */,
-				366BC29B1C0EF6A3003A89E1 /* Department+CoreDataProperties.m */,
-				366BC29C1C0EF6A3003A89E1 /* Designation+CoreDataProperties.h */,
-				366BC29D1C0EF6A3003A89E1 /* Designation+CoreDataProperties.m */,
-				366BC29E1C0EF6A3003A89E1 /* Employee+CoreDataProperties.h */,
-				366BC29F1C0EF6A3003A89E1 /* Employee+CoreDataProperties.m */,
+				CFE1215F1C115474000081A0 /* Department+CoreDataProperties.h */,
+				CFE121601C115474000081A0 /* Department+CoreDataProperties.m */,
+				CFE121611C115474000081A0 /* Designation+CoreDataProperties.h */,
+				CFE121621C115474000081A0 /* Designation+CoreDataProperties.m */,
+				CFE121631C115474000081A0 /* Employee+CoreDataProperties.h */,
+				CFE121641C115474000081A0 /* Employee+CoreDataProperties.m */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -119,8 +122,8 @@
 		366BC2A31C0EF6AC003A89E1 /* Departmant */ = {
 			isa = PBXGroup;
 			children = (
-				366BC2A41C0EF6AC003A89E1 /* Department.h */,
-				366BC2A51C0EF6AC003A89E1 /* Department.m */,
+				CFE121681C115483000081A0 /* Department.h */,
+				CFE121691C115483000081A0 /* Department.m */,
 			);
 			path = Departmant;
 			sourceTree = "<group>";
@@ -128,8 +131,8 @@
 		366BC2A71C0EF6B7003A89E1 /* Designation */ = {
 			isa = PBXGroup;
 			children = (
-				366BC2A81C0EF6B7003A89E1 /* Designation.h */,
-				366BC2A91C0EF6B7003A89E1 /* Designation.m */,
+				CFE1216B1C115497000081A0 /* Designation.h */,
+				CFE1216C1C115497000081A0 /* Designation.m */,
 			);
 			path = Designation;
 			sourceTree = "<group>";
@@ -137,8 +140,8 @@
 		366BC2AB1C0EF6C5003A89E1 /* Employee */ = {
 			isa = PBXGroup;
 			children = (
-				366BC2AC1C0EF6C5003A89E1 /* Employee.h */,
-				366BC2AD1C0EF6C5003A89E1 /* Employee.m */,
+				CFE1216E1C1154A7000081A0 /* Employee.h */,
+				CFE1216F1C1154A7000081A0 /* Employee.m */,
 			);
 			path = Employee;
 			sourceTree = "<group>";
@@ -168,14 +171,15 @@
 		36EA13F01C0C43F900D6FAAE /* hrm_2 */ = {
 			isa = PBXGroup;
 			children = (
+				CF5D07771C1142FB00BEA91F /* Controllers */,
 				366BC2AB1C0EF6C5003A89E1 /* Employee */,
 				366BC2A71C0EF6B7003A89E1 /* Designation */,
 				366BC2A31C0EF6AC003A89E1 /* Departmant */,
 				366BC2991C0EF6A3003A89E1 /* CoreData */,
+				36EA13F41C0C43F900D6FAAE /* AppDelegate.h */,
 				36EA13F51C0C43F900D6FAAE /* AppDelegate.m */,
 				36EA13FA1C0C43F900D6FAAE /* Main.storyboard */,
 				36EA13FD1C0C43F900D6FAAE /* Assets.xcassets */,
-				36EA13F41C0C43F900D6FAAE /* AppDelegate.h */,
 				36EA13FF1C0C43F900D6FAAE /* LaunchScreen.storyboard */,
 				36EA14021C0C43F900D6FAAE /* Info.plist */,
 				36EA13F11C0C43F900D6FAAE /* Supporting Files */,
@@ -217,6 +221,15 @@
 				D01D2CB1D3FB3DD34B93B3F3 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF5D07771C1142FB00BEA91F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF5D07741C1142B600BEA91F /* MainViewController.h */,
+				CF5D07751C1142B600BEA91F /* MainViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		FF75FACE52B6A761080FDE69 /* Frameworks */ = {
@@ -409,15 +422,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				366BC2A11C0EF6A3003A89E1 /* Designation+CoreDataProperties.m in Sources */,
+				CFE121671C115474000081A0 /* Employee+CoreDataProperties.m in Sources */,
+				CFE121661C115474000081A0 /* Designation+CoreDataProperties.m in Sources */,
 				36EA13F61C0C43F900D6FAAE /* AppDelegate.m in Sources */,
-				366BC2A01C0EF6A3003A89E1 /* Department+CoreDataProperties.m in Sources */,
-				366BC2A21C0EF6A3003A89E1 /* Employee+CoreDataProperties.m in Sources */,
+				CFE1216A1C115483000081A0 /* Department.m in Sources */,
+				CF5D07761C1142B600BEA91F /* MainViewController.m in Sources */,
+				CFE121701C1154A7000081A0 /* Employee.m in Sources */,
 				3633D6B71C0D9B8500F4763A /* DataModel.xcdatamodeld in Sources */,
-				366BC2AA1C0EF6B7003A89E1 /* Designation.m in Sources */,
-				366BC2AE1C0EF6C5003A89E1 /* Employee.m in Sources */,
 				36EA13F31C0C43F900D6FAAE /* main.m in Sources */,
-				366BC2A61C0EF6AC003A89E1 /* Department.m in Sources */,
+				CFE121651C115474000081A0 /* Department+CoreDataProperties.m in Sources */,
+				CFE1216D1C115497000081A0 /* Designation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
