@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3633D66F1C0D6E5D00F4763A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3633D66E1C0D6E5D00F4763A /* CoreData.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		3633D6B71C0D9B8500F4763A /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3633D6B51C0D9B8500F4763A /* DataModel.xcdatamodeld */; };
+		366CDFB01C15718D006F420A /* EmployeeInfoViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 366CDFAD1C15718D006F420A /* EmployeeInfoViewStoryboard.storyboard */; };
+		366CDFB11C15718D006F420A /* EmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 366CDFAF1C15718D006F420A /* EmployeeViewController.m */; };
 		36EA13F31C0C43F900D6FAAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EA13F21C0C43F900D6FAAE /* main.m */; };
 		36EA13F61C0C43F900D6FAAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EA13F51C0C43F900D6FAAE /* AppDelegate.m */; };
 		36EA13FC1C0C43F900D6FAAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36EA13FA1C0C43F900D6FAAE /* Main.storyboard */; };
@@ -48,6 +50,9 @@
 /* Begin PBXFileReference section */
 		3633D66E1C0D6E5D00F4763A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3633D6B61C0D9B8500F4763A /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		366CDFAD1C15718D006F420A /* EmployeeInfoViewStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EmployeeInfoViewStoryboard.storyboard; sourceTree = "<group>"; };
+		366CDFAE1C15718D006F420A /* EmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeViewController.h; sourceTree = "<group>"; };
+		366CDFAF1C15718D006F420A /* EmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeViewController.m; sourceTree = "<group>"; };
 		36EA13EE1C0C43F900D6FAAE /* hrm_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hrm_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36EA13F21C0C43F900D6FAAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		36EA13F41C0C43F900D6FAAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -151,6 +156,16 @@
 			path = Employee;
 			sourceTree = "<group>";
 		};
+		366CDFAC1C15716F006F420A /* Employeeview */ = {
+			isa = PBXGroup;
+			children = (
+				366CDFAD1C15718D006F420A /* EmployeeInfoViewStoryboard.storyboard */,
+				366CDFAE1C15718D006F420A /* EmployeeViewController.h */,
+				366CDFAF1C15718D006F420A /* EmployeeViewController.m */,
+			);
+			name = Employeeview;
+			sourceTree = "<group>";
+		};
 		36EA13E51C0C43F900D6FAAE = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +191,7 @@
 		36EA13F01C0C43F900D6FAAE /* hrm_2 */ = {
 			isa = PBXGroup;
 			children = (
+				366CDFAC1C15716F006F420A /* Employeeview */,
 				84A286741C153A0400821359 /* EmployeeList */,
 				CF5D07771C1142FB00BEA91F /* Controllers */,
 				366BC2AB1C0EF6C5003A89E1 /* Employee */,
@@ -364,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36EA14011C0C43F900D6FAAE /* LaunchScreen.storyboard in Resources */,
+				366CDFB01C15718D006F420A /* EmployeeInfoViewStoryboard.storyboard in Resources */,
 				36EA13FE1C0C43F900D6FAAE /* Assets.xcassets in Resources */,
 				84A286781C153AAD00821359 /* EmployeeList.storyboard in Resources */,
 				36EA13FC1C0C43F900D6FAAE /* Main.storyboard in Resources */,
@@ -441,6 +458,7 @@
 			files = (
 				CFE121671C115474000081A0 /* Employee+CoreDataProperties.m in Sources */,
 				CFE121661C115474000081A0 /* Designation+CoreDataProperties.m in Sources */,
+				366CDFB11C15718D006F420A /* EmployeeViewController.m in Sources */,
 				36EA13F61C0C43F900D6FAAE /* AppDelegate.m in Sources */,
 				CFE1216A1C115483000081A0 /* Department.m in Sources */,
 				CF5D07761C1142B600BEA91F /* MainViewController.m in Sources */,
