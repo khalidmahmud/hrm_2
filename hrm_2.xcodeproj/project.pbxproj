@@ -17,6 +17,8 @@
 		36EA140C1C0C43F900D6FAAE /* hrm_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EA140B1C0C43F900D6FAAE /* hrm_2Tests.m */; };
 		36EA14171C0C43F900D6FAAE /* hrm_2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EA14161C0C43F900D6FAAE /* hrm_2UITests.m */; };
 		65AEE1E051821317C2B738A7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FBE339EB2264F2F8C75B42 /* libPods.a */; };
+		84A286781C153AAD00821359 /* EmployeeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A286751C153AAD00821359 /* EmployeeList.storyboard */; };
+		84A286791C153AAD00821359 /* EmployeeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A286771C153AAD00821359 /* EmployeeListViewController.m */; };
 		CF5D07761C1142B600BEA91F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5D07751C1142B600BEA91F /* MainViewController.m */; };
 		CFE121651C115474000081A0 /* Department+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE121601C115474000081A0 /* Department+CoreDataProperties.m */; };
 		CFE121661C115474000081A0 /* Designation+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE121621C115474000081A0 /* Designation+CoreDataProperties.m */; };
@@ -60,6 +62,9 @@
 		36EA14121C0C43F900D6FAAE /* hrm_2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hrm_2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36EA14161C0C43F900D6FAAE /* hrm_2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hrm_2UITests.m; sourceTree = "<group>"; };
 		36EA14181C0C43F900D6FAAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84A286751C153AAD00821359 /* EmployeeList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EmployeeList.storyboard; sourceTree = "<group>"; };
+		84A286761C153AAD00821359 /* EmployeeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeListViewController.h; sourceTree = "<group>"; };
+		84A286771C153AAD00821359 /* EmployeeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeListViewController.m; sourceTree = "<group>"; };
 		B759598790C3D70B93DC32C6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CF5D07741C1142B600BEA91F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		CF5D07751C1142B600BEA91F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
@@ -171,6 +176,7 @@
 		36EA13F01C0C43F900D6FAAE /* hrm_2 */ = {
 			isa = PBXGroup;
 			children = (
+				84A286741C153A0400821359 /* EmployeeList */,
 				CF5D07771C1142FB00BEA91F /* Controllers */,
 				366BC2AB1C0EF6C5003A89E1 /* Employee */,
 				366BC2A71C0EF6B7003A89E1 /* Designation */,
@@ -212,6 +218,16 @@
 				36EA14181C0C43F900D6FAAE /* Info.plist */,
 			);
 			path = hrm_2UITests;
+			sourceTree = "<group>";
+		};
+		84A286741C153A0400821359 /* EmployeeList */ = {
+			isa = PBXGroup;
+			children = (
+				84A286751C153AAD00821359 /* EmployeeList.storyboard */,
+				84A286761C153AAD00821359 /* EmployeeListViewController.h */,
+				84A286771C153AAD00821359 /* EmployeeListViewController.m */,
+			);
+			name = EmployeeList;
 			sourceTree = "<group>";
 		};
 		8B122DD1DF0C9A4CCC06300F /* Pods */ = {
@@ -349,6 +365,7 @@
 			files = (
 				36EA14011C0C43F900D6FAAE /* LaunchScreen.storyboard in Resources */,
 				36EA13FE1C0C43F900D6FAAE /* Assets.xcassets in Resources */,
+				84A286781C153AAD00821359 /* EmployeeList.storyboard in Resources */,
 				36EA13FC1C0C43F900D6FAAE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +445,7 @@
 				CFE1216A1C115483000081A0 /* Department.m in Sources */,
 				CF5D07761C1142B600BEA91F /* MainViewController.m in Sources */,
 				CFE121701C1154A7000081A0 /* Employee.m in Sources */,
+				84A286791C153AAD00821359 /* EmployeeListViewController.m in Sources */,
 				3633D6B71C0D9B8500F4763A /* DataModel.xcdatamodeld in Sources */,
 				36EA13F31C0C43F900D6FAAE /* main.m in Sources */,
 				CFE121651C115474000081A0 /* Department+CoreDataProperties.m in Sources */,
