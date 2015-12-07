@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface MainViewController : UIViewController
+@property (strong, nonatomic) NSArray *departmentArray;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+- (NSArray *)getDepartmentNames;
 
 @end
