@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EmployeeListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface EmployeeListViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *employeeTableView;
+@property (weak, nonatomic) NSArray *employeeNameArray;
+
+- (NSArray *)getEmployeeNames;
 
 @end
