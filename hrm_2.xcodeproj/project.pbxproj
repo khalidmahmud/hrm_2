@@ -19,6 +19,7 @@
 		36EA140C1C0C43F900D6FAAE /* hrm_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EA140B1C0C43F900D6FAAE /* hrm_2Tests.m */; };
 		36EA14171C0C43F900D6FAAE /* hrm_2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EA14161C0C43F900D6FAAE /* hrm_2UITests.m */; };
 		65AEE1E051821317C2B738A7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FBE339EB2264F2F8C75B42 /* libPods.a */; };
+		840C2E5D1C16B24100207DC5 /* EmployeeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C2E5C1C16B24100207DC5 /* EmployeeInfoViewController.m */; };
 		84A286781C153AAD00821359 /* EmployeeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A286751C153AAD00821359 /* EmployeeList.storyboard */; };
 		84A286791C153AAD00821359 /* EmployeeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A286771C153AAD00821359 /* EmployeeListViewController.m */; };
 		CF5D07761C1142B600BEA91F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5D07751C1142B600BEA91F /* MainViewController.m */; };
@@ -67,6 +68,8 @@
 		36EA14121C0C43F900D6FAAE /* hrm_2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hrm_2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36EA14161C0C43F900D6FAAE /* hrm_2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hrm_2UITests.m; sourceTree = "<group>"; };
 		36EA14181C0C43F900D6FAAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		840C2E5B1C16B24100207DC5 /* EmployeeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeInfoViewController.h; sourceTree = "<group>"; };
+		840C2E5C1C16B24100207DC5 /* EmployeeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeInfoViewController.m; sourceTree = "<group>"; };
 		84A286751C153AAD00821359 /* EmployeeList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EmployeeList.storyboard; sourceTree = "<group>"; };
 		84A286761C153AAD00821359 /* EmployeeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeListViewController.h; sourceTree = "<group>"; };
 		84A286771C153AAD00821359 /* EmployeeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeListViewController.m; sourceTree = "<group>"; };
@@ -239,6 +242,8 @@
 		84A286741C153A0400821359 /* EmployeeList */ = {
 			isa = PBXGroup;
 			children = (
+				840C2E5B1C16B24100207DC5 /* EmployeeInfoViewController.h */,
+				840C2E5C1C16B24100207DC5 /* EmployeeInfoViewController.m */,
 				84A286751C153AAD00821359 /* EmployeeList.storyboard */,
 				84A286761C153AAD00821359 /* EmployeeListViewController.h */,
 				84A286771C153AAD00821359 /* EmployeeListViewController.m */,
@@ -457,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFE121671C115474000081A0 /* Employee+CoreDataProperties.m in Sources */,
+				840C2E5D1C16B24100207DC5 /* EmployeeInfoViewController.m in Sources */,
 				CFE121661C115474000081A0 /* Designation+CoreDataProperties.m in Sources */,
 				366CDFB11C15718D006F420A /* EmployeeViewController.m in Sources */,
 				36EA13F61C0C43F900D6FAAE /* AppDelegate.m in Sources */,
