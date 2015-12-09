@@ -59,6 +59,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Department List" id="s2h-GG-ouc">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="HOo-ca-xwE">
+                            <connections>
+                                <segue destination="AWc-co-sMy" kind="presentation" id="SVP-ff-JEZ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="n4z-3x-uvX"/>
                     </navigationItem>
                     <connections>
@@ -69,6 +74,122 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWM-ya-rOz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1709" y="400"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Oh4-iH-ggb">
+            <objects>
+                <viewController id="AWc-co-sMy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="teS-rx-0VY"/>
+                        <viewControllerLayoutGuide type="bottom" id="fUr-aa-EJG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uXT-1a-aUd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="urK-JD-KaA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Departments and Designations" id="MfM-Es-ekE"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Department Names" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8e-br-g3a">
+                                <rect key="frame" x="198" y="81" width="185" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="cB4-86-wpd"/>
+                                    <constraint firstAttribute="width" constant="185" id="kRl-Yd-FWz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cNt-pZ-Nrw">
+                                <rect key="frame" x="194" y="130" width="200" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="K1l-Dt-i51"/>
+                                    <constraint firstAttribute="height" constant="30" id="hQJ-pd-6vo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCd-Xg-Hch">
+                                <rect key="frame" x="229" y="183" width="123" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="hbN-IH-pDr"/>
+                                    <constraint firstAttribute="height" constant="30" id="xYO-Kg-K0b"/>
+                                </constraints>
+                                <state key="normal" title="Add Department"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Designation Names" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTl-0U-XyV">
+                                <rect key="frame" x="205" y="277" width="184" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="AkV-LM-YUs"/>
+                                    <constraint firstAttribute="width" constant="184" id="kYm-ni-eho"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sQS-d9-wBh">
+                                <rect key="frame" x="198" y="320" width="200" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="U3v-r0-wP8"/>
+                                    <constraint firstAttribute="width" constant="200" id="fl5-CO-3sa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-sW-3dZ">
+                                <rect key="frame" x="234" y="373" width="129" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gkA-Ut-hCX"/>
+                                    <constraint firstAttribute="width" constant="129" id="vwI-8e-ywy"/>
+                                </constraints>
+                                <state key="normal" title="Add Designation"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfT-6S-ubE">
+                                <rect key="frame" x="189" y="444" width="216" height="46"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="E2j-N4-LeV"/>
+                                    <constraint firstAttribute="width" constant="216" id="Zrw-G4-q9H"/>
+                                </constraints>
+                                <state key="normal" title="DISSMISS"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qfT-6S-ubE" firstAttribute="centerX" secondItem="uXT-1a-aUd" secondAttribute="centerX" constant="-3" id="0mX-Gl-zcN"/>
+                            <constraint firstItem="jCd-Xg-Hch" firstAttribute="top" secondItem="cNt-pZ-Nrw" secondAttribute="bottom" constant="23" id="2kG-Po-qGC"/>
+                            <constraint firstItem="w8e-br-g3a" firstAttribute="top" secondItem="urK-JD-KaA" secondAttribute="bottom" constant="37" id="5h7-0x-QXL"/>
+                            <constraint firstItem="aTl-0U-XyV" firstAttribute="top" secondItem="jCd-Xg-Hch" secondAttribute="bottom" constant="64" id="AdI-Ie-b5e"/>
+                            <constraint firstItem="jCd-Xg-Hch" firstAttribute="centerX" secondItem="uXT-1a-aUd" secondAttribute="centerX" constant="-9.5" id="CY8-Bq-Mr6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="urK-JD-KaA" secondAttribute="trailing" constant="-20" id="Cfd-yS-rG6"/>
+                            <constraint firstItem="w8e-br-g3a" firstAttribute="centerX" secondItem="uXT-1a-aUd" secondAttribute="centerX" constant="-9.5" id="CqK-Nf-v3t"/>
+                            <constraint firstItem="6Mb-sW-3dZ" firstAttribute="top" secondItem="sQS-d9-wBh" secondAttribute="bottom" constant="23" id="KgQ-bC-N7f"/>
+                            <constraint firstItem="aTl-0U-XyV" firstAttribute="centerX" secondItem="uXT-1a-aUd" secondAttribute="centerX" constant="-3" id="TJT-bI-HKx"/>
+                            <constraint firstItem="sQS-d9-wBh" firstAttribute="centerX" secondItem="uXT-1a-aUd" secondAttribute="centerX" constant="-2" id="Tib-TD-7PT"/>
+                            <constraint firstItem="qfT-6S-ubE" firstAttribute="top" secondItem="6Mb-sW-3dZ" secondAttribute="bottom" constant="41" id="Tz7-pF-15X"/>
+                            <constraint firstItem="cNt-pZ-Nrw" firstAttribute="top" secondItem="w8e-br-g3a" secondAttribute="bottom" constant="28" id="Vza-bf-Uuh"/>
+                            <constraint firstItem="urK-JD-KaA" firstAttribute="leading" secondItem="uXT-1a-aUd" secondAttribute="leadingMargin" constant="-20" id="foV-C7-grh"/>
+                            <constraint firstItem="cNt-pZ-Nrw" firstAttribute="centerX" secondItem="uXT-1a-aUd" secondAttribute="centerX" constant="-6" id="g3i-dS-xOL"/>
+                            <constraint firstItem="6Mb-sW-3dZ" firstAttribute="centerX" secondItem="uXT-1a-aUd" secondAttribute="centerX" constant="-1.5" id="iAE-9w-sSW"/>
+                            <constraint firstItem="urK-JD-KaA" firstAttribute="top" secondItem="uXT-1a-aUd" secondAttribute="topMargin" id="moa-pR-cW8"/>
+                            <constraint firstItem="sQS-d9-wBh" firstAttribute="top" secondItem="aTl-0U-XyV" secondAttribute="bottom" constant="22" id="rWL-xW-zkD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2N9-kl-t9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1707" y="1070"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kaU-cQ-7ji">
