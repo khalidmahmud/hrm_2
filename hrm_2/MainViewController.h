@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 @property (strong, nonatomic) NSArray *departmentArray;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong, nonatomic) NSMutableArray *filteredSearchResults;
+@property (strong, nonatomic) UIView *disableViewOverlay;
+@property (assign, nonatomic) BOOL isFiltered;
 
+- (void)addingDisableOverlay;
 - (NSArray *)getDepartmentNames;
 
 @end
