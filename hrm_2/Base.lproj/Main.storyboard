@@ -75,10 +75,10 @@
             </objects>
             <point key="canvasLocation" x="1709" y="400"/>
         </scene>
-        <!--View Controller-->
+        <!--Insert View Controller-->
         <scene sceneID="Oh4-iH-ggb">
             <objects>
-                <viewController id="AWc-co-sMy" sceneMemberID="viewController">
+                <viewController id="AWc-co-sMy" customClass="InsertViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="teS-rx-0VY"/>
                         <viewControllerLayoutGuide type="bottom" id="fUr-aa-EJG"/>
@@ -91,7 +91,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <animations/>
                                 <items>
-                                    <navigationItem title="Departments and Designations" id="MfM-Es-ekE"/>
+                                    <navigationItem title="Departments and Designations" id="MfM-Es-ekE">
+                                        <barButtonItem key="rightBarButtonItem" title="Dissmiss" id="Xsx-Ul-HKB">
+                                            <connections>
+                                                <action selector="dissmissViewButton:" destination="AWc-co-sMy" id="ebU-um-vUt"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Department Names" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8e-br-g3a">
@@ -114,6 +120,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="AWc-co-sMy" id="UEh-uz-oRF"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCd-Xg-Hch">
                                 <rect key="frame" x="229" y="183" width="123" height="30"/>
@@ -123,6 +132,9 @@
                                     <constraint firstAttribute="height" constant="30" id="xYO-Kg-K0b"/>
                                 </constraints>
                                 <state key="normal" title="Add Department"/>
+                                <connections>
+                                    <action selector="addDepartmentButton:" destination="AWc-co-sMy" eventType="touchUpInside" id="a0X-0Z-G9r"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Designation Names" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTl-0U-XyV">
                                 <rect key="frame" x="205" y="277" width="184" height="21"/>
@@ -144,6 +156,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="AWc-co-sMy" id="qau-gH-Nll"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-sW-3dZ">
                                 <rect key="frame" x="234" y="373" width="129" height="30"/>
@@ -153,21 +168,14 @@
                                     <constraint firstAttribute="width" constant="129" id="vwI-8e-ywy"/>
                                 </constraints>
                                 <state key="normal" title="Add Designation"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfT-6S-ubE">
-                                <rect key="frame" x="189" y="444" width="216" height="46"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="E2j-N4-LeV"/>
-                                    <constraint firstAttribute="width" constant="216" id="Zrw-G4-q9H"/>
-                                </constraints>
-                                <state key="normal" title="DISSMISS"/>
+                                <connections>
+                                    <action selector="addDesignationButton:" destination="AWc-co-sMy" eventType="touchUpInside" id="iuW-RU-EWD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qfT-6S-ubE" firstAttribute="centerX" secondItem="uXT-1a-aUd" secondAttribute="centerX" constant="-3" id="0mX-Gl-zcN"/>
                             <constraint firstItem="jCd-Xg-Hch" firstAttribute="top" secondItem="cNt-pZ-Nrw" secondAttribute="bottom" constant="23" id="2kG-Po-qGC"/>
                             <constraint firstItem="w8e-br-g3a" firstAttribute="top" secondItem="urK-JD-KaA" secondAttribute="bottom" constant="37" id="5h7-0x-QXL"/>
                             <constraint firstItem="aTl-0U-XyV" firstAttribute="top" secondItem="jCd-Xg-Hch" secondAttribute="bottom" constant="64" id="AdI-Ie-b5e"/>
@@ -177,7 +185,6 @@
                             <constraint firstItem="6Mb-sW-3dZ" firstAttribute="top" secondItem="sQS-d9-wBh" secondAttribute="bottom" constant="23" id="KgQ-bC-N7f"/>
                             <constraint firstItem="aTl-0U-XyV" firstAttribute="centerX" secondItem="uXT-1a-aUd" secondAttribute="centerX" constant="-3" id="TJT-bI-HKx"/>
                             <constraint firstItem="sQS-d9-wBh" firstAttribute="centerX" secondItem="uXT-1a-aUd" secondAttribute="centerX" constant="-2" id="Tib-TD-7PT"/>
-                            <constraint firstItem="qfT-6S-ubE" firstAttribute="top" secondItem="6Mb-sW-3dZ" secondAttribute="bottom" constant="41" id="Tz7-pF-15X"/>
                             <constraint firstItem="cNt-pZ-Nrw" firstAttribute="top" secondItem="w8e-br-g3a" secondAttribute="bottom" constant="28" id="Vza-bf-Uuh"/>
                             <constraint firstItem="urK-JD-KaA" firstAttribute="leading" secondItem="uXT-1a-aUd" secondAttribute="leadingMargin" constant="-20" id="foV-C7-grh"/>
                             <constraint firstItem="cNt-pZ-Nrw" firstAttribute="centerX" secondItem="uXT-1a-aUd" secondAttribute="centerX" constant="-6" id="g3i-dS-xOL"/>
@@ -186,6 +193,10 @@
                             <constraint firstItem="sQS-d9-wBh" firstAttribute="top" secondItem="aTl-0U-XyV" secondAttribute="bottom" constant="22" id="rWL-xW-zkD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="departmentNameField" destination="cNt-pZ-Nrw" id="2jJ-6q-Koz"/>
+                        <outlet property="designationNameField" destination="sQS-d9-wBh" id="j2j-RC-62G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2N9-kl-t9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
