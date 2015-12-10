@@ -34,7 +34,6 @@
 }
 
 - (NSArray *)getDepartmentNames {
-    
     AppDelegate *appdelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appdelegate managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -52,7 +51,6 @@
 }
 
 - (NSArray *)getDesignations {
-    
     AppDelegate *appdelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appdelegate managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -80,7 +78,6 @@
 
 // The number of rows of data
 - (long)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    
     if([pickerView isEqual:self.pvDesignation]) {
         return _pickerDatafordesignation.count;
     }
@@ -90,7 +87,6 @@
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    
     if(pickerView == self.pvDesignation) {
         designation_Name = _pickerDatafordesignation[row];
     }
@@ -101,7 +97,6 @@
 
 // The data to return for the row and component (column) that's being passed in
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    
     if([pickerView isEqual:self.pvDesignation]) {
         Designation *depInfo = _pickerDatafordesignation[row];
         return depInfo.designationName;
@@ -115,22 +110,47 @@
 - (IBAction)btnSaveEmployee:(id)sender {
     AppDelegate *appdelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appdelegate managedObjectContext];
-    Employee *empobj = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:context];
-    empobj.name = self.txtName.text;
-    empobj.placeOfBirth = self.txtBirthPlace.text;
-    empobj.status = self.txtStatus.text;
-    empobj.phone = self.txtPhone.text;
-    empobj.birthDate = [[self.dpBirthDate date] timeIntervalSince1970];
-    empobj.active = self.sActive.on;
     NSError *error;
-    [department_Name addEmployeeOfDepartmentTypeObject:empobj];
-    [designation_Name addEmployeeOfDesignationTypeObject:empobj];
-    if (![context save:&error]) {
-        NSLog(@"save done");
-        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Employee" inManagedObjectContext:context];
+    [request setEntity:entity];
+    NSPredicate *predicatedes = [NSPredicate predicateWithFormat:@"name == %@",self.txtName.text ];
+    [request setPredicate:predicatedes];
+    Employee *empObject = [[context executeFetchRequest:request error:&error]lastObject] ;
+    if(empObject) {
+        empObject.name = self.txtName.text;
+        empObject.placeOfBirth = self.txtBirthPlace.text;
+        empObject.status = self.txtStatus.text;
+        empObject.phone = self.txtPhone.text;
+        empObject.active = self.sActive.on;
+        empObject.birthDate = [[self.dpBirthDate date] timeIntervalSince1970];
+        [department_Name addEmployeeOfDepartmentTypeObject:empObject];
+        [designation_Name addEmployeeOfDesignationTypeObject:empObject];
+        if (![context save:&error]) {
+            NSLog(@"save done");
+            NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+        }
+        [self clear];
+        NSLog(@"employee edit done");
     }
-    [self clear];
-    NSLog(@"done");
+    else {
+        Employee *empobj = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:context];
+        empobj.name = self.txtName.text;
+        empobj.placeOfBirth = self.txtBirthPlace.text;
+        empobj.status = self.txtStatus.text;
+        empobj.phone = self.txtPhone.text;
+        empobj.birthDate = [[self.dpBirthDate date] timeIntervalSince1970];
+        empobj.active = self.sActive.on;
+        NSError *error;
+        [department_Name addEmployeeOfDepartmentTypeObject:empobj];
+        [designation_Name addEmployeeOfDesignationTypeObject:empobj];
+        if (![context save:&error]) {
+            NSLog(@"save done");
+            NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+        }
+        [self clear];
+        NSLog(@"done");
+    }
 }
 
 -(void)clear {
@@ -141,7 +161,6 @@
     [self.sActive setOn:YES animated:YES];
  }
 - (IBAction)btnReset:(id)sender {
-    
-    [self clear];
+        [self clear];
 }
 @end
