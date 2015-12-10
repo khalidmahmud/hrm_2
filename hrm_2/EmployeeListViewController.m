@@ -7,6 +7,9 @@
 //
 
 #import "EmployeeListViewController.h"
+#import "AppDelegate.h"
+#import "Employee.h"
+#import "Department.h"
 
 @interface EmployeeListViewController ()
 
@@ -17,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.employeeNameArray = [self getEmployeeNames];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,10 +43,10 @@
 }
 
 - (NSInteger)tableView:(UITableView *)employeeTableView numberOfRowsInSection:(NSInteger)section {
-    return 30;
+    return [self.employeeNameArray count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)employeeTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)employeeTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *simpleTableIdentifier = @"Cell";
     
     UITableViewCell *cell = [employeeTableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -50,7 +54,35 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
+    Employee *employeeObject = [self.employeeNameArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@",(employeeObject.name) ? employeeObject.name: @""];
     return cell;
+}
+
+#pragma mark - fetch Employee
+
+- (NSArray *)getEmployeeNames {
+    AppDelegate *appdelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appdelegate managedObjectContext];
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Employee"];
+    fetchRequest.fetchBatchSize = 30;
+    fetchRequest.fetchLimit = 3000;
+    NSString *departmentName = @"";
+    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"departmentOfEmployee.departmantName == %@",departmentName];
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"name"
+                                                                     ascending:YES
+                                                                      selector:@selector(localizedStandardCompare:)];
+    fetchRequest.sortDescriptors = @[sortDescriptor];
+    NSError *error;
+    NSArray *employeeName = [context executeFetchRequest:fetchRequest error:&error];
+    if (!employeeName) {
+        NSLog(@"%@",[error localizedDescription]);
+        NSMutableArray *emptyArray = [NSMutableArray array];
+        return emptyArray;
+    } else {
+        self.employeeNameArray = [employeeName valueForKey: @"name"];
+    }
+    return employeeName;
 }
 
 @end
