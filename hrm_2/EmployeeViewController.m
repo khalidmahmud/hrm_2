@@ -31,7 +31,7 @@
     self.pvDepartmant.delegate = self;
     self.pvDesignation.dataSource = self;
     self.pvDesignation.delegate = self;
-    [self viewEmployeeInfo:@"kazi sharmin Dina"];
+    //[self viewEmployeeInfo:@"kazi sharmin Dina"];
 }
 
 - (NSArray *)getDepartmentNames {
@@ -204,6 +204,7 @@
     [self.sActive setOn:YES animated:YES];
  }
 - (IBAction)btnReset:(id)sender {
-        [self clear];
+        //[self clear];
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 @end

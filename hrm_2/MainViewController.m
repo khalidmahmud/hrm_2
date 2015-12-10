@@ -89,6 +89,13 @@
     return departmentName;
 }
 
+- (IBAction)gotoEmployeeEditView:(id)sender {
+    UIStoryboard *editStoryBord = [UIStoryboard storyboardWithName:@"EmployeeInfoViewStoryboard" bundle:nil];
+    UIViewController * employeeInfoview = [editStoryBord instantiateInitialViewController];
+    employeeInfoview.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    [self presentViewController:employeeInfoview animated:YES completion:NULL];
+}
+
 - (void)addingDisableOverlay {
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     self.disableViewOverlay = [[UIView alloc]initWithFrame:CGRectMake(0.0f, 108.0f, screenRect.size.width, screenRect.size.height)];
