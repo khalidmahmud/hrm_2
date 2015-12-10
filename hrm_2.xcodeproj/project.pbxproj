@@ -23,6 +23,7 @@
 		84A286781C153AAD00821359 /* EmployeeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A286751C153AAD00821359 /* EmployeeList.storyboard */; };
 		84A286791C153AAD00821359 /* EmployeeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A286771C153AAD00821359 /* EmployeeListViewController.m */; };
 		CF5D07761C1142B600BEA91F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5D07751C1142B600BEA91F /* MainViewController.m */; };
+		CFCC98471C19258B0012BD5B /* InsertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCC98461C19258B0012BD5B /* InsertViewController.m */; };
 		CFE121651C115474000081A0 /* Department+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE121601C115474000081A0 /* Department+CoreDataProperties.m */; };
 		CFE121661C115474000081A0 /* Designation+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE121621C115474000081A0 /* Designation+CoreDataProperties.m */; };
 		CFE121671C115474000081A0 /* Employee+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE121641C115474000081A0 /* Employee+CoreDataProperties.m */; };
@@ -76,6 +77,8 @@
 		B759598790C3D70B93DC32C6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CF5D07741C1142B600BEA91F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		CF5D07751C1142B600BEA91F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		CFCC98451C19258B0012BD5B /* InsertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertViewController.h; sourceTree = "<group>"; };
+		CFCC98461C19258B0012BD5B /* InsertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertViewController.m; sourceTree = "<group>"; };
 		CFE1215F1C115474000081A0 /* Department+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Department+CoreDataProperties.h"; sourceTree = "<group>"; };
 		CFE121601C115474000081A0 /* Department+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Department+CoreDataProperties.m"; sourceTree = "<group>"; };
 		CFE121611C115474000081A0 /* Designation+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Designation+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -265,6 +268,8 @@
 			children = (
 				CF5D07741C1142B600BEA91F /* MainViewController.h */,
 				CF5D07751C1142B600BEA91F /* MainViewController.m */,
+				CFCC98451C19258B0012BD5B /* InsertViewController.h */,
+				CFCC98461C19258B0012BD5B /* InsertViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -474,6 +479,7 @@
 				36EA13F31C0C43F900D6FAAE /* main.m in Sources */,
 				CFE121651C115474000081A0 /* Department+CoreDataProperties.m in Sources */,
 				CFE1216D1C115497000081A0 /* Designation.m in Sources */,
+				CFCC98471C19258B0012BD5B /* InsertViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
