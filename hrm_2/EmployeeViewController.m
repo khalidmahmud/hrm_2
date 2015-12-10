@@ -31,6 +31,7 @@
     self.pvDepartmant.delegate = self;
     self.pvDesignation.dataSource = self;
     self.pvDesignation.delegate = self;
+    [self viewEmployeeInfo:@"kazi sharmin Dina"];
 }
 
 - (NSArray *)getDepartmentNames {
@@ -150,6 +151,48 @@
         }
         [self clear];
         NSLog(@"done");
+    }
+}
+
+-(void)viewEmployeeInfo: (NSString*)employeeName {
+    if(employeeName.length != 0){
+        AppDelegate *appdelegate = [[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext *context = [appdelegate managedObjectContext];
+        NSError *error;
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Employee" inManagedObjectContext:context];
+        [request setEntity:entity];
+        NSPredicate *predicatedes = [NSPredicate predicateWithFormat:@"name == %@",employeeName ];
+        [request setPredicate:predicatedes];
+        Employee *empObject = [[context executeFetchRequest:request error:&error]lastObject] ;
+        if(empObject) {
+            self.txtName.text = empObject.name;
+            self.txtBirthPlace.text = empObject.placeOfBirth;
+            self.txtStatus.text = empObject.status;
+            self.txtPhone.text = empObject.phone;
+            [self.sActive  setOn:(empObject.active == 1)];
+            int row = 0;
+            for(Department *dpt in _pickerDatafordepartment){
+                if([dpt.departmantName isEqualToString: empObject.departmentOfEmployee.departmantName]) {
+                    [self.pvDepartmant selectRow:row inComponent:0 animated:YES];
+                    break;
+                }
+                row++;
+            }
+            row = 0;
+            for(Designation *dpt in _pickerDatafordesignation){
+                if([dpt.designationName isEqualToString: empObject.designationOfEmployee.designationName]) {
+                    [self.pvDesignation selectRow:row inComponent:0 animated:YES];
+                    break;
+                }
+                row ++;
+            }
+            self.dpBirthDate.date = [NSDate dateWithTimeIntervalSince1970: empObject.birthDate];
+            NSLog(@"employee view done");
+        }
+        else {
+            NSLog(@"employee does not exist in the database");
+        }
     }
 }
 
