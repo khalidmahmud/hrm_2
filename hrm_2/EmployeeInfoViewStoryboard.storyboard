@@ -233,7 +233,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="Hx3-mr-XVw"/>
                                         </constraints>
-                                        <state key="normal" title="Reset"/>
+                                        <state key="normal" title="Cancel"/>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="Hx3-mr-XVw"/>

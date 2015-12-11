@@ -18,5 +18,6 @@
 
 - (void)addingDisableOverlay;
 - (NSArray *)getDepartmentNames;
+- (IBAction)gotoEmployeeEditView:(id)sender;
 
 @end

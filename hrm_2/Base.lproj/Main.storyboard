@@ -64,7 +64,11 @@
                                 <segue destination="AWc-co-sMy" kind="presentation" id="SVP-ff-JEZ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="n4z-3x-uvX"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="n4z-3x-uvX">
+                            <connections>
+                                <action selector="gotoEmployeeEditView:" destination="mHA-e7-ouq" id="yPC-gX-RGU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="lMU-k5-Dqp" id="ssc-HM-AsN"/>
