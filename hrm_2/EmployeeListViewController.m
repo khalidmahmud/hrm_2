@@ -10,6 +10,8 @@
 #import "AppDelegate.h"
 #import "Employee.h"
 #import "Department.h"
+#import "EmployeeInfoViewController.h"
+
 
 @interface EmployeeListViewController ()
 
@@ -29,14 +31,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
@@ -48,14 +50,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)employeeTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *simpleTableIdentifier = @"Cell";
-    
     UITableViewCell *cell = [employeeTableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     Employee *employeeObject = [self.employeeNameArray objectAtIndex:indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@",(employeeObject.name) ? employeeObject.name: @""];
+    if (!employeeObject.active) {
+        cell.textLabel.backgroundColor = [UIColor grayColor];
+    }
     return cell;
 }
 
@@ -67,12 +70,14 @@
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Employee"];
     fetchRequest.fetchBatchSize = 30;
     fetchRequest.fetchLimit = 3000;
-    NSString *departmentName = @"";
-    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"departmentOfEmployee.departmantName == %@",departmentName];
+    [fetchRequest setReturnsObjectsAsFaults:NO];
+    self.departmentName = @"Marketing";
+    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"departmentOfEmployee.departmantName == %@",self.departmentName];
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"name"
                                                                      ascending:YES
                                                                       selector:@selector(localizedStandardCompare:)];
     fetchRequest.sortDescriptors = @[sortDescriptor];
+    //[fetchRequest setPropertiesToFetch:@[@"name"]];
     NSError *error;
     NSArray *employeeName = [context executeFetchRequest:fetchRequest error:&error];
     if (!employeeName) {
@@ -82,7 +87,29 @@
     } else {
         self.employeeNameArray = [employeeName valueForKey: @"name"];
     }
+    NSLog(@"%@", employeeName);
     return employeeName;
+
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"infoViewPage" sender:self.employeeTableView];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"infoViewPage"]) {
+        NSIndexPath *indexPath = [self.employeeTableView indexPathForSelectedRow];
+        EmployeeInfoViewController *destViewController = segue.destinationViewController;
+        static NSString *simpleTableIdentifier = @"Cell";
+        UITableViewCell *cell = [self.employeeTableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        }
+        Employee *employeeObject = [self.employeeNameArray objectAtIndex:indexPath.row];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@",(employeeObject.name) ? employeeObject.name: @""];
+        destViewController.showName = cell.textLabel.text;
+    }
 }
 
 @end

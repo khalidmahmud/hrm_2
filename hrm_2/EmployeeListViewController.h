@@ -11,7 +11,8 @@
 @interface EmployeeListViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *employeeTableView;
-@property (weak, nonatomic) NSArray *employeeNameArray;
+@property (strong, nonatomic) NSArray *employeeNameArray;
+@property (strong, nonatomic) NSString *departmentName;
 
 - (NSArray *)getEmployeeNames;
 
