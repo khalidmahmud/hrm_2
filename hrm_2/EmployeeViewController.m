@@ -31,6 +31,9 @@
     self.pvDepartmant.delegate = self;
     self.pvDesignation.dataSource = self;
     self.pvDesignation.delegate = self;
+    if (self.nameTxt.length != 0) {
+        [self viewEmployeeInfo:self.nameTxt];
+    }
     //[self viewEmployeeInfo:@"kazi sharmin Dina"];
 }
 
